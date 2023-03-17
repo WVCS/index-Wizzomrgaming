@@ -23,7 +23,7 @@
       </div> 
       <div class="C"><h2> My Roblox account for possible christmas give away's </h2></div> 
       <div class="D"><h1> Hi! </h1></div> 
-      <div class="E"> <img src="" width="290" height="300"> </div> 
+      <div <link rel="icon" href="PRESENT.docx"> width="290" height="300"> </div> 
       <div class="F"> <h2>Timer For Christmas </h2>
        <h1> <p id="demo"></p></h1>
       </div> 
@@ -35,4 +35,126 @@
     
   </body>
 </html>
+  <style>
+    body{
+  background-color: #5FDD9D;
+  text-align: center;
+}
+nav {
+      list-style-type: none;
+      position: fixed;
+      width: 100vw;
+      background-color: salmon;
+      left: 0;
+      top: 0;
+    }
+li {
+      display: inline;
+      float: left;
+      padding: 11px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #5FDD9D;
+    }
+
+    li:hover {
+      background-color: gold;
+    }
+div {
+    background-color: #91F9E5;
+    Border: solid 1px gray;
+    border-radius: 10px
+}
+.wrapper {
+  display: grid;
+  height: 90vh;
+  grid-template:
+    "A B C" auto
+    "D E F"
+    "G H";
+  grid-row-gap: 3%;
+  grid-column-gap: 4%;
+}
+.A {
+  grid-column: 1 / 4;
+  text-align: center;
+    padding: 11px;
+}
+.B {
+  grid-area: 2 / 1 / 5 / 2;
+}/* row line / column line / end row / end column */
+@media only screen and (max-width: 1024px) {
+ .wrapper {
+   flex-direction: column;
+   background-color: black;
+  }
+  body {
+    background-color: black;
+  }
+  .A {
+    font-size: 20px;
+  }
+  .B {
+    font-size: 50px;
+  }
+  .C {
+    font-size: 20px;
+  }
+  .D {
+    font-size: 20px;
+  }
+  .E {
+    font-size: 20px;
+  }
+  .F {
+    font-size: 20px;
+  }
+  .G {
+    font-size: 20px;
+  }
+  .H {
+    font-size: 20px;
+  }
   
+  
+  
+  
+}
+#demo {
+  background-color: #80A1D4;
+  color: #DACE4D;
+}
+</style>
+        <script>
+          // Set the date we're counting down to
+var countDownDate = new Date("Dec 25, 2023 00:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+
+        </script>
