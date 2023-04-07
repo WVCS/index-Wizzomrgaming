@@ -1,0 +1,133 @@
+<html>
+  <body>
+    <nav>
+    <li><a href="index.html"> Home </a></li>
+    <li> <a href="https://www.powayusd.com/en-US/Schools/HS/WVHS/Calendars/Schedules/Bell-Schedule"> School Schedual</a>
+    </li>
+    <li> <a href="Video-Games.html">Noun Project</a></li>
+    <li><a href="https://www.youtube.com/@wizzomr5562"> My Youtube Channel</a></li>
+    <li> <a href="Convince.html">Convince Project</a></li>
+  </nav>
+    
+    <div class="wrapper">
+      <div class="A"> <h1> BAND </h1></div>
+       <div class="B"> 
+         <h1>Band Members</h1>
+         
+         <H2> Jen Ledger</H2><h3>Drum Kit</h3>
+         <H2> John Cooper </H2><h3>Acoustic guitar</h3>
+        <H2> Korey Cooper </H2><h3>Guitar</h3>
+         <H2> Lori Peters</H2><h3>Drum Kit</h3>
+         <H2> Seth Morrison </H2><h3>Lead guitar</h3>
+         <H2> Ben Kasica </H2><h3>Lead guitar</h3>
+          <H2> Jonathan Salas </H2><h3>Lead guitar</h3>
+          <H2> Trey McClurkin </H2><h3>Drum Kit</h3>
+          <H2> Ken Steorts </H2><h3>Lead guitar</h3>
+          <H2> Kevin Haaland </H2><h3>Lead guitar</h3>
+      </div> 
+      <div class="C"><h1> Skillet </h1></div> 
+      <div class="D"><h1> Hi! </h1></div> 
+      <div class="E"> <img src="Skillet.jfif" width="290" height="300"> </div> 
+      <div class="F"> <h2>My Fav. song </h2><h3>Monster</h3>
+       <h1> <p id="demo"></p></h1>
+      </div> 
+      <div class="G"> <h2> My fav. Singer </h2><h3>John Cooper</h3> </div> 
+      <div class="H"> <h2>What ype of song creator they are.</h2><h3>Skillet Is A Rock band</h3> </div>
+    </div>
+  
+    
+    
+  </body>
+</html>
+  <style>
+    body{
+  background-color: #5F7470;
+  text-align: center;
+}
+nav {
+      list-style-type: none;
+      position: fixed;
+      width: 100vw;
+      background-color: #6C6F7D;
+      left: 0;
+      top: 0;
+    }
+li {
+      display: inline;
+      float: left;
+      padding: 11px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #DC602E;
+    }
+
+    li:hover {
+      background-color: gold;
+    }
+div {
+    background-color: #485665;
+    Border: solid 1px gray;
+    border-radius: 10px
+}
+.wrapper {
+  display: grid;
+  height: 90vh;
+  grid-template:
+    "A B C" auto
+    "D E F"
+    "G H";
+  grid-row-gap: 3%;
+  grid-column-gap: 4%;
+}
+.A {
+  grid-column: 1 / 4;
+  text-align: center;
+    padding: 11px;
+}
+.B {
+  grid-area: 2 / 1 / 5 / 2;
+}/* row line / column line / end row / end column */
+@media only screen and (max-width: 1024px) {
+ .wrapper {
+   flex-direction: column;
+   background-color: black;
+  }
+  body {
+    background-color: black;
+  }
+  .A {
+    font-size: 20px;
+  }
+  .B {
+    font-size: 50px;
+  }
+  .C {
+    font-size: 20px;
+  }
+  .D {
+    font-size: 20px;
+  }
+  .E {
+    font-size: 20px;
+  }
+  .F {
+    font-size: 20px;
+  }
+  .G {
+    font-size: 20px;
+  }
+  .H {
+    font-size: 20px;
+  }
+  
+  
+  
+  
+}
+#demo {
+  background-color: #80A1D4;
+  color: #DACE4D;
+}
+</style>
