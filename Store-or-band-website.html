@@ -1,0 +1,167 @@
+<html>
+<head>
+  <title> My Youtube Channel </title>
+  <div id="entireDiv">
+  <form autocomplete="off">
+    <div class="autocomplete">
+      <input id="myInput" type="text" name="myBox"
+             placeholder="Search...">
+    </div>
+  </form>
+</head>
+<body>
+ 
+    
+  <div class="grid-item">My Youtube Channel</div>
+
+  <div class="grid-container">
+    <div class="grid-item">My YT <h6>https://www.youtube.com/@wizzomr5562</h6></div>
+    <div class="grid-item">Shop <h6>We dont sell anything</h6></div>  
+  </div>
+  <div class="grid-item"><iframe width="1280" height="720" src="https://www.youtube.com/embed/xsfJzMsUe6Y" title="I beat &quot;Black and White&quot; in ADOFAI (A Dance Of Fire And Ice)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+  <div class="grid-container">
+    <div class="grid-item">Info <h6>This is my youtube channel</h6></div>
+    <div class="grid-item">Location<h6>On Youtube</h6></div>  
+  <div class="grid-item">Enter your email <label for="fname"><h5>Email:</label><br>
+ <form onsubmit="alert('Thank you for your Email but i will not be able to see it so please email Wresem@gmail.com if you want to let me know of any video ideas! THANKS!!!')";> <input type="text" id="fname" name="fname" value="ExampleEmail@gmail.com"><br><input type="submit" value="Submit">
+</form></div></h5>
+  <div class="grid-item">My Twitch Account Where I do a lot of streams! <h6>Twitch.tv/Wizzomrgaming</h6></div>
+</div>
+    <div class="grid-item">Have A Great Day!</div>  
+  </body>
+  </html>
+  <style>
+    div {
+  border:solid 1px #AE8CA3;
+  font-family: cursive;
+  color: #4A0000; /* AAFAC8 */
+}.autocomplete {
+  background-color: #F40000;
+}
+
+/* A74482 */  /* F40000 */
+
+
+
+#myInput {
+  width: 70%;
+  background-color: #ccc;
+}
+
+
+
+Body {
+  background-color: #F44E3F;
+}
+
+/* BBC8CA */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: #F4796B;
+  padding: 10px;
+}
+
+/* c7ffed */
+
+.grid-item {
+  background-color: #BD0000;
+  /* b592a0 */
+  border: 1px solid #F4998D;
+  /* 9c7178 */
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+  </style>
+  
+  
+  <script>
+    function autocomplete(inp, arr) {
+
+  var currentFocus;
+
+  inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+
+      closeAllLists();
+      if (!val) { return false;}
+      currentFocus = -1;
+
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+
+      this.parentNode.appendChild(a);
+
+      for (i = 0; i < arr.length; i++) {
+
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+
+          b = document.createElement("DIV");
+
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+
+          b.addEventListener("click", function(e) {
+
+              inp.value = this.getElementsByTagName("input")[0].value;
+
+              closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+  });
+
+  inp.addEventListener("keydown", function(e) {
+      var x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        currentFocus++;
+        addActive(x);
+      } else if (e.keyCode == 38) { //up
+        currentFocus--;
+        addActive(x);
+      } else if (e.keyCode == 13) {
+        e.preventDefault();
+        if (currentFocus > -1) {
+          if (x) x[currentFocus].click();
+        }
+      }
+  });
+  function addActive(x) {
+    if (!x) return false;
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (x.length - 1);
+    x[currentFocus].classList.add("autocomplete-active");
+  }
+  function removeActive(x) {
+    for (var i = 0; i < x.length; i++) {
+      x[i].classList.remove("autocomplete-active");
+    }
+  }
+  function closeAllLists(elmnt) {
+
+    var x = document.getElementsByClassName("autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+  }
+
+  document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+  });
+}
+
+var autoAnswers = ["hi", "bye", "car", "My House Address", "map", "google maps", "ADOFAI", "A Dance Of Fire And Ice", "Geometry Dash", "Roblox", "Car Crushers 2", "I need help", "where is the best place to hide a body?", "I HATE YOU", "REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE", "HAHA", "L BOZO", "???", "U dont exist", "www.google.com", "sandstrike.io",];
+
+autocomplete(document.getElementById("myInput"), autoAnswers);
+    </script>
