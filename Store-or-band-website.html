@@ -24,7 +24,7 @@
   </form>
 </head>
 <body>
- 
+ <button onclick="topFunction()" id="topbtn"> ^W^</button>
     
   <div class="grid-item">My Youtube Channel</div>
 
@@ -78,7 +78,18 @@ Body {
 }
 
 /* c7ffed */
-
+#topbtn {
+  position: fixed;
+  bottom: 2%;
+  right: 3%;
+  font-size: 30px;
+  background-color: #006DAA;
+  border-radius: 30px;
+  padding: 10px;
+  display: none;
+}
+    
+    
 .grid-item {
   background-color: #BD0000;
   /* b592a0 */
@@ -105,7 +116,16 @@ padding: 11px;
     li:hover {
 background-color: gold;
 }
-
+@media only screen and (max-width: 1024px) {
+ .wrapper {
+   flex-direction: column;
+   background-color: black; }}
+    
+    #topbtn:hover {
+  border: solid #AFE3C0 3px;
+}
+    
+    
   </style>
   
   
